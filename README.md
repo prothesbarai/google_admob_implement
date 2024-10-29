@@ -208,7 +208,9 @@ public class MainActivity extends AppCompatActivity {
 ```
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![BannerAds](https://github.com/user-attachments/assets/4643938e-7af3-43ed-b514-691af4c1ea3e)
+![FullScreenAds](https://github.com/user-attachments/assets/eaa6f93c-2cc7-4b54-80dd-2b9066b5dfc9)
+![VideoAds](https://github.com/user-attachments/assets/ee9841f1-65c4-454f-81e8-ab8986e95dab)
 
 ## Google Admob Official Link
 

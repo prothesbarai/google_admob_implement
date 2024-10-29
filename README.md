@@ -10,8 +10,8 @@ How do you show ads in your app ? Here is the step by step guide
 
 ```bash
   dependencies {
-  implementation 'com.google.android.gms:play-services-ads:23.3.0'
-}
+      implementation 'com.google.android.gms:play-services-ads:23.3.0'
+  }
 ```
 
 #### Step 2 :

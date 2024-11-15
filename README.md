@@ -8,7 +8,7 @@ How do you show ads in your app ? Here is the step by step guide
 
 #### Step 1 : 
 
-```bash
+```java
   dependencies {
 
       implementation 'com.google.android.gms:play-services-ads:23.3.0'
@@ -17,7 +17,7 @@ How do you show ads in your app ? Here is the step by step guide
 ```
 
 #### Step 2 :
-```bash
+```xml
   <manifest>
 
         <uses-permission android:name="android.permission.INTERNET"/>
@@ -32,7 +32,7 @@ How do you show ads in your app ? Here is the step by step guide
 ```
 
 #### Step 3 :
-```bash
+```java
 <manifest>
   <application>
 
@@ -45,7 +45,7 @@ How do you show ads in your app ? Here is the step by step guide
 ```
 
 #### Step 4 ( This Code Write After : [ setContentView(R.layout.activity_main); ] ):
-```bash
+```java
 MobileAds.initialize(MainActivity.this, new OnInitializationCompleteListener() {
     @Override
     public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
@@ -57,7 +57,7 @@ AdRequest adRequest = new AdRequest.Builder().build();
 
 ## Now Implementation Banner Ads :
 #### XML Code :
-```bash
+```xml
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
@@ -72,7 +72,7 @@ AdRequest adRequest = new AdRequest.Builder().build();
     </com.google.android.gms.ads.AdView>
 ```
 #### In Java Code [ Declaration Variable ] :
-```bash
+```java
 public class MainActivity extends AppCompatActivity {
 
     private AdView adView;
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 #### Java Code :
-```bash
+```java
         adView = findViewById(R.id.adView);
 
         // ======== Check that you wrote this code in step 4 Start Here =======
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 ## Now Implements Interstitial Ads Or Full Screen Ads
 #### In Java Code [ Declaration Variable ] :
-```bash
+```java
 public class MainActivity extends AppCompatActivity {
 
     private InterstitialAd mInterstitialAd;
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 
 #### Java Code [ Step 1 ] [ Looks like you did it in first step 4... Check ]:
 #### [ মনে হয় আপনি এটি প্রথমের স্টেপ ৪ এ করেছেন... চেক করুন ]:
-```bash
+```java
     // ======== Check that you wrote this code in step 4 Start Here =======
 
     MobileAds.initialize(MainActivity.this, new OnInitializationCompleteListener() {
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 #### Java Code [ Step 2 ]:
-```bash
+```java
     InterstitialAd.load(this,"ca-app-pub-3940256099942544/1033173712", adRequest, new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 #### Java Code [ Step 3 ] [ Where you want to see this ads this code paste there ]:
-```bash
+```java
     if (mInterstitialAd != null) {
         mInterstitialAd.show(MainActivity.this);
     }
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## Now Implementation Rewarded Or Video Ads :
 #### In Java Code [ Declaration Variable ] :
-```bash
+```java
 public class MainActivity extends AppCompatActivity {
 
     private RewardedAd rewardedAd;
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 #### Java Code [ Step 1 ] [ Looks like you did it in first step 4... Check ]:
 #### [ মনে হয় আপনি এটি প্রথমের স্টেপ ৪ এ করেছেন... চেক করুন ]:
-```bash
+```java
     // ======== Check that you wrote this code in step 4 Start Here =======
 
     MobileAds.initialize(MainActivity.this, new OnInitializationCompleteListener() {
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 #### Java Code [ Step 2 ]:
-```bash
+```java
     RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917",
                 adRequest, new RewardedAdLoadCallback() {
                     @Override
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 #### Java Code [ Step 3 ] [ Where you want to see this ads this code paste there ]:
-```bash
+```java
     if (rewardedAd != null) {
         rewardedAd.show(MainActivity.this, new OnUserEarnedRewardListener() {
             @Override
